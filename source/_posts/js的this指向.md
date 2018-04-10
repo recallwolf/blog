@@ -81,10 +81,10 @@ this的指向并不是o而是b
 要达到预期目标可以把o这个对象用self保存下来
 
 #### 3.作为构造函数调用
-    function fn(){
+    function Fn(){
         this.name = "recallwolf";
     }
-    var a = new fn();
+    var a = new Fn();
     console.log(a.name); //recallwolf
 
 需要注意的是new关键字可以改变this的指向，将这个this指向对象a
@@ -94,11 +94,11 @@ new关键字创建一个对象实例，这里用变量a创建了一个fn的实�
 2.在构造函数fn中默认返回这个临时对象this，赋给a
 3.将临时对象的_proto_指向fn的prototype**
 
-    function fn(){
+    function Fn(){
         this.name = "recallwolf";
         console.log(this); //Window
     }
-    var a = fn();
+    var a = Fn();
     console.log(a.name); //Uncaught TypeError: Cannot read property 'name' of undefined
 
 这是因为this指向的是window对象
@@ -106,35 +106,35 @@ new关键字创建一个对象实例，这里用变量a创建了一个fn的实�
 ##### 如果构造函数有返回值
 **如果返回值是一个对象，那么this指向的就是那个返回的对象，如果返回值不是一个对象那么this还是指向函数的实例。**
 
-    function fn(){  
+    function Fn(){  
         this.name = "recallwolf";  
         return {};  
     }
-    var a = new fn();  
+    var a = new Fn();  
     console.log(a.name); //undefined
 
 
-    function fn(){  
+    function Fn(){  
         this.name = "recallwolf";
         return 1;
     }
-    var a = new fn();  
+    var a = new Fn();  
     console.log(a.name); //recallwolf
 
-    function fn(){  
+    function Fn(){  
         this.name = "recallwolf"; 
         return undefined;
     }
-    var a = new fn();  
+    var a = new Fn();  
     console.log(a.name); //recallwolf
 
 虽然null也是对象，但是在这里this还是指向那个函数的实例,null比较特殊
 
-    function fn(){  
+    function Fn(){  
         his.name = "recallwolf";  
         return null;
     }
-    var a = new fn();  
+    var a = new Fn();  
     console.log(a.name); //recallwolf
 
 
