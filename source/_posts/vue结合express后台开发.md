@@ -32,7 +32,7 @@ cd server
 npm install
 ```
 5.修改文件结构  
-将`app.use(express.static(path.join(__dirname, 'public')))``app.js`修改为`app.use(express.static(path.resolve(__dirname, '../dist')))`
+将app.js中 `app.use(express.static(path.join(__dirname, 'public')))` 修改为 `app.use(express.static(path.resolve(__dirname, '../dist')))`
 
 ### 打包部署
 ```
