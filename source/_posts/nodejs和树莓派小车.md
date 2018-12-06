@@ -17,7 +17,7 @@ description:  nodejs驱动树莓派
   5.sg90舵机
 
 #### 基本接线图 
-{% asset_img sketch.png %} 
+{% asset_img sketch.jpg %} 
 
 
 #### 小车代码
