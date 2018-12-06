@@ -1,10 +1,10 @@
 ---
-title: js的this指向
+title: JS的this指向
 date: 2018-04-08 12:50:44
 tags: JavaScript
 categories: JavaScript
 comments: false
-description: 关于js this指向的总结
+description: 关于JS this指向的总结
 ---
 **一般情况下 this 不是在函数定义的时候确定指向！而是在函数执行的时候确定，this指向的是调用函数的那个对象**
 
@@ -64,7 +64,7 @@ this的指向并不是o而是b
 
 **this不是在函数定义的时候确定指向，在函数里面定义的函数也是要看是谁调用的这个函数(方法)this才是谁；在这里并不是o调用fn里面的test函数，实际上是window**
 
-**换种说法，如果一个函数中有this，但是它没有被上一级的对象所调用，那么this指向的就是window，这里需要说明的是在js的严格版中this是undefined**
+**换种说法，如果一个函数中有this，但是它没有被上一级的对象所调用，那么this指向的就是window，这里需要说明的是在JS的严格版中this是undefined**
 
     var o = {
             a: 18,

@@ -1,5 +1,5 @@
 ---
-title: js的原型链
+title: JS的原型链
 date: 2018-04-10 17:31:44
 tags: JavaScript
 categories: JavaScript
