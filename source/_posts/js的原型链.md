@@ -1,6 +1,7 @@
 ---
 title: JS的原型链
 date: 2018-04-10 17:31:44
+updated: 2018-12-11 22:53:00
 tags: JavaScript
 categories: JavaScript
 comments: false
@@ -36,16 +37,26 @@ JavaScript有几种方式来生成实例对象
     var f = new Person("recallwolf", 18)
 
 `Person()`就是构造函数，`f`是生成的实例对象
-和第一种方式**不一样的地方**在于，在我们声明构造函数的时候，会设置一个 `prototype` 属性，这个属性包含 `prototype` 对象。
+和第一种方式**不一样的地方**在于，在我们声明构造函数的时候，会设置一个 `prototype` 属性，这个属性包含 `prototype` 对象。此外仍存在一个   `__proto__` 对象，该对象一般指向`Function.prototype`。
 
-如下图所示，`prototype` 包含一个 `constructor` 和 `__proto__`
+1.如下图所示，`prototype` 包含一个 `constructor` 和 `__proto__`
 
 {% asset_img 选区2.png %}
 
 `contructor` 可以看到是指向构造函数本身的指针
 `__proto__` 是一个指向上一级对象prototype的指针，这里也是指向的Object.prototype
 
-**相同的是**创建的实例对象和第一种创建实例对象都会有一个 `__proto__` 对象，都指向上一级 `prototype` ，这里指向的是 `Person.prototype`
+2.如下图所示，`__proto__`指向`Function.prototype`
+
+{% asset_img 选区3.png %}
+
+**相同的是**该创建的实例对象和第一种创建实例对象都会有一个 `__proto__` 对象，都指向上一级 `prototype` ，该实例对象指向的是 `Person.prototype`。
+
+{% asset_img 选区4.png %}
+
+**不同的是**该创建的实例对象存在`constructor`并且与构造函数`prototype`中的`constructor`相等。
+
+{% asset_img 选区5.png %}
 
 构造函数、原型和实例的关系如下图所示
 >图作者：[manxisuo](https://link.jianshu.com/?t=https://segmentfault.com/u/manxisuo)
