@@ -17,7 +17,7 @@ description:  nodejs驱动树莓派
   5.sg90舵机
 
 #### 基本接线图 
-{% asset_img sketch.jpg %} 
+![sketch.jpg](http://ww1.sinaimg.cn/large/616b30bdgy1g0ggmf6bzej21f01v6awl.jpg) 
 
 
 #### 小车代码
@@ -299,4 +299,4 @@ description:  nodejs驱动树莓派
 终端如图：
 {% asset_img terminal.png %}  
 
-{% asset_img car.jpg %} 
+![car](http://ww1.sinaimg.cn/large/616b30bdgy1g0gghrppa2j238w2eo4qt.jpg)
